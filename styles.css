@@ -1250,3 +1250,113 @@ a {
     flex-direction: column;
     gap: 0.75rem;
 }
+
+/* —— Event image carousel —— */
+.event-card--festas-gallery {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-carousel {
+    position: relative;
+    background: var(--black);
+    touch-action: pan-y pinch-zoom;
+}
+
+.event-carousel-viewport {
+    overflow: hidden;
+}
+
+.event-carousel-track {
+    display: flex;
+    transition: transform 0.45s var(--ease, cubic-bezier(0.4, 0, 0.2, 1));
+    will-change: transform;
+}
+
+.event-carousel-slide {
+    flex: 0 0 100%;
+    margin: 0;
+}
+
+.event-carousel-slide img {
+    display: block;
+    width: 100%;
+    height: min(52vw, 320px);
+    max-height: 360px;
+    object-fit: contain;
+    background: #0d0d0d;
+}
+
+.event-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(17, 17, 17, 0.75);
+    color: var(--white);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.event-carousel-btn:hover {
+    background: var(--pink);
+}
+
+.event-carousel-btn--prev {
+    left: 0.5rem;
+}
+
+.event-carousel-btn--next {
+    right: 0.5rem;
+}
+
+.event-carousel-dots {
+    position: absolute;
+    bottom: 0.65rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+    z-index: 2;
+}
+
+.event-carousel-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.event-carousel-dot.is-active {
+    background: var(--pink);
+    transform: scale(1.25);
+}
+
+.event-card--festas-gallery .event-card-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (max-width: 992px) {
+    .event-carousel-slide img {
+        height: min(70vw, 300px);
+    }
+}

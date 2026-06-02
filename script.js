@@ -106,3 +106,85 @@ if (enrollForm) {
         window.open(`https://wa.me/351934309236?text=${text}`, '_blank', 'noopener,noreferrer');
     });
 }
+
+function initEventCarousels() {
+    document.querySelectorAll('[data-event-carousel]').forEach((carousel) => {
+        const track = carousel.querySelector('.event-carousel-track');
+        const slides = Array.from(carousel.querySelectorAll('.event-carousel-slide'));
+        const prevBtn = carousel.querySelector('.event-carousel-btn--prev');
+        const nextBtn = carousel.querySelector('.event-carousel-btn--next');
+        const dotsWrap = carousel.querySelector('.event-carousel-dots');
+        if (!track || slides.length < 2) return;
+
+        let index = slides.findIndex((s) => s.classList.contains('is-active'));
+        if (index < 0) index = 0;
+
+        const dots = slides.map((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'event-carousel-dot' + (i === index ? ' is-active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', `Cartaz ${i + 1} de ${slides.length}`);
+            dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+            return dot;
+        });
+
+        function goTo(nextIndex) {
+            index = (nextIndex + slides.length) % slides.length;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('is-active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('is-active', i === index);
+                dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+            });
+        }
+
+        prevBtn.addEventListener('click', () => goTo(index - 1));
+        nextBtn.addEventListener('click', () => goTo(index + 1));
+
+        let touchStartX = 0;
+        let touchDeltaX = 0;
+        carousel.addEventListener(
+            'touchstart',
+            (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                touchDeltaX = 0;
+            },
+            { passive: true }
+        );
+        carousel.addEventListener(
+            'touchmove',
+            (e) => {
+                touchDeltaX = e.changedTouches[0].screenX - touchStartX;
+            },
+            { passive: true }
+        );
+        carousel.addEventListener(
+            'touchend',
+            () => {
+                if (Math.abs(touchDeltaX) < 40) return;
+                if (touchDeltaX < 0) goTo(index + 1);
+                else goTo(index - 1);
+            },
+            { passive: true }
+        );
+
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                goTo(index - 1);
+            }
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                goTo(index + 1);
+            }
+        });
+        carousel.setAttribute('tabindex', '0');
+    });
+}
+
+initEventCarousels();
