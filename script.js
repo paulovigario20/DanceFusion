@@ -107,6 +107,10 @@ if (enrollForm) {
     });
 }
 
+function isMobileViewport() {
+    return window.matchMedia('(max-width: 992px)').matches;
+}
+
 function initEventCarousels() {
     document.querySelectorAll('[data-event-carousel]').forEach((carousel) => {
         const track = carousel.querySelector('.event-carousel-track');
@@ -114,7 +118,7 @@ function initEventCarousels() {
         const prevBtn = carousel.querySelector('.event-carousel-btn--prev');
         const nextBtn = carousel.querySelector('.event-carousel-btn--next');
         const dotsWrap = carousel.querySelector('.event-carousel-dots');
-        if (!track || slides.length < 2) return;
+        if (!track || slides.length < 2 || !dotsWrap) return;
 
         let index = slides.findIndex((s) => s.classList.contains('is-active'));
         if (index < 0) index = 0;
@@ -143,14 +147,16 @@ function initEventCarousels() {
             });
         }
 
-        prevBtn.addEventListener('click', () => goTo(index - 1));
-        nextBtn.addEventListener('click', () => goTo(index + 1));
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
 
         let touchStartX = 0;
         let touchDeltaX = 0;
+
         carousel.addEventListener(
             'touchstart',
             (e) => {
+                if (!isMobileViewport()) return;
                 touchStartX = e.changedTouches[0].screenX;
                 touchDeltaX = 0;
             },
@@ -159,6 +165,7 @@ function initEventCarousels() {
         carousel.addEventListener(
             'touchmove',
             (e) => {
+                if (!isMobileViewport()) return;
                 touchDeltaX = e.changedTouches[0].screenX - touchStartX;
             },
             { passive: true }
@@ -166,6 +173,7 @@ function initEventCarousels() {
         carousel.addEventListener(
             'touchend',
             () => {
+                if (!isMobileViewport()) return;
                 if (Math.abs(touchDeltaX) < 40) return;
                 if (touchDeltaX < 0) goTo(index + 1);
                 else goTo(index - 1);
@@ -174,6 +182,7 @@ function initEventCarousels() {
         );
 
         carousel.addEventListener('keydown', (e) => {
+            if (!isMobileViewport()) return;
             if (e.key === 'ArrowLeft') {
                 e.preventDefault();
                 goTo(index - 1);
@@ -183,7 +192,7 @@ function initEventCarousels() {
                 goTo(index + 1);
             }
         });
-        carousel.setAttribute('tabindex', '0');
+        carousel.setAttribute('tabindex', isMobileViewport() ? '0' : '-1');
     });
 }
 
