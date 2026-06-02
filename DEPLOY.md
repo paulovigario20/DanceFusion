@@ -18,11 +18,12 @@
 
 1. Entra em https://railway.app e faz login com GitHub.  
 2. **New Project** → **Deploy from GitHub repo** → escolhe `DanceFusion`.  
-3. Railway deteta o `package.json` e usa `npm start` (servidor estático na porta `PORT`).  
-4. Em **Settings** → **Networking** → **Generate Domain** para obteres um URL tipo `xxx.up.railway.app`.  
-5. (Opcional) Em **Custom Domain**, aponta `dancefusion.pt`.
+3. Railway corre `npm start` (servidor estático na porta `PORT`).  
+4. Nos **logs**, `Accepting connections at http://localhost:8080` é **normal** — é interno ao contentor. **Não abras esse link no teu PC.**  
+5. Em **Settings** → **Networking** → **Generate Domain** → abre o URL público (ex.: `xxx.up.railway.app`).  
+6. (Opcional) **Custom Domain** → `dancefusion.pt`.
 
-Ficheiros já incluídos para Railway: `package.json`, `railway.json`, `nixpacks.toml`.
+O aviso `npm warn config production` pode ser ignorado.
 
 ---
 
