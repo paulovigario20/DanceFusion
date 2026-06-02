@@ -77,7 +77,7 @@ const revealObserver = new IntersectionObserver(
 
 document
     .querySelectorAll(
-        '.audience-card, .feature-list li, .modality-list li, .stat, .enroll-form, .social-card'
+        '.audience-card, .feature-list li, .modality-list li, .stat, .enroll-form, .social-card, .event-card, .video-card'
     )
     .forEach((el) => {
         el.classList.add('reveal');
