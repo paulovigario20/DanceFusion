@@ -3,31 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academia de dança no Montijo com aulas a partir dos 3 anos. Dança, artes de palco, formação, espetáculos e comunidade. Na Dance Fusion, dançar é aqui.">
+    <meta name="description" content="Dance Fusion — academia de dança no Montijo. Aulas a partir dos 3 anos, formação artística, palco e comunidade. Alameda Pocinho das Nascentes. Ligue 934 309 236.">
     <meta name="theme-color" content="#1a0d26">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Dance Fusion - Academia de Dança no Montijo">
+    <link rel="canonical" href="https://dancefusion.pt/">
+
+    <meta property="og:title" content="Dance Fusion — Academia de Dança no Montijo">
     <meta property="og:description" content="Academia de dança no Montijo com aulas a partir dos 3 anos. Dança, artes de palco, formação, espetáculos e comunidade.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dance-fusion.pt">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Dance+Fusion">
-    
-    <title>Dance Fusion - Academia de Dança no Montijo</title>
+    <meta property="og:url" content="https://dancefusion.pt/">
+    <meta property="og:image" content="https://dancefusion.pt/images/hero.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="Dance Fusion">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dance Fusion — Academia de Dança no Montijo">
+    <meta name="twitter:description" content="A partir dos 3 anos, dançar é aqui. Aulas para crianças, jovens e adultos no Montijo.">
+    <meta name="twitter:image" content="https://dancefusion.pt/images/hero.jpg">
+
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <title>Dance Fusion — Academia de Dança no Montijo</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DanceSchool",
+        "name": "Dance Fusion",
+        "alternateName": "DanceFusion Academia de Dança",
+        "url": "https://dancefusion.pt/",
+        "logo": "https://dancefusion.pt/images/logo.png",
+        "image": "https://dancefusion.pt/images/hero.jpg",
+        "telephone": "+351934309236",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Alameda Pocinho das Nascentes",
+            "postalCode": "2870-453",
+            "addressLocality": "Montijo",
+            "addressCountry": "PT"
+        },
+        "sameAs": [
+            "https://www.facebook.com/academiadancefusion/",
+            "https://www.instagram.com/academiadancefusion/"
+        ],
+        "description": "Academia de dança no Montijo com aulas a partir dos 3 anos. Dança, artes de palco, formação e espetáculos."
+    }
+    </script>
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav class="navbar">
+    <a class="skip-link" href="#main-content">Saltar para o conteúdo</a>
+
+    <nav class="navbar" aria-label="Navegação principal">
         <div class="navbar-container">
-            <div class="navbar-logo">
+            <a href="#hero" class="navbar-logo" aria-label="Dance Fusion — Início">
+                <img src="images/logo.png" alt="" class="logo-img" width="120" height="52">
                 <span class="logo-text">Dance Fusion</span>
-            </div>
-            <div class="hamburger" id="hamburger">
+            </a>
+            <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#hero" class="nav-link">Início</a></li>
                 <li><a href="#why-us" class="nav-link">Porquê Escolher</a></li>
@@ -38,191 +76,192 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Dance Fusion</h1>
-            <p class="hero-subtitle">Academia de Dança no Montijo</p>
-            <p class="hero-text">Dança, expressão, ritmo e palco para todas as idades. Na Dance Fusion, a paixão pela dança começa cedo e cresce com cada movimento.</p>
-            <p class="hero-tagline">A partir dos 3 anos, DANÇAR É AQUI.</p>
-            
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Inscrever-me</a>
-                <a href="#classes" class="btn btn-secondary">Ver Aulas</a>
-            </div>
+    <main id="main-content">
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Dance Fusion</h1>
+                <p class="hero-subtitle">Academia de Dança no Montijo</p>
+                <p class="hero-text">Dança, expressão, ritmo e palco para todas as idades. Na Dance Fusion, a paixão pela dança começa cedo e cresce com cada movimento.</p>
+                <p class="hero-tagline">A partir dos 3 anos, DANÇAR É AQUI.</p>
 
-            <div class="hero-contact-buttons">
-                <a href="tel:+351934309236" class="btn-icon btn-phone">
-                    <span class="icon">☎️</span>
-                    <span>Ligar</span>
-                </a>
-                <a href="https://www.facebook.com/academiadancefusion?locale=pt_PT" target="_blank" rel="noopener noreferrer" class="btn-icon btn-facebook">
-                    <span class="icon">f</span>
-                    <span>Facebook</span>
-                </a>
-                <a href="#" class="btn-icon btn-instagram">
-                    <span class="icon">📷</span>
-                    <span>Instagram</span>
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/600x600?text=Dance+Fusion+Hero" alt="Dance Fusion" class="hero-img">
-        </div>
-    </section>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Inscrever-me</a>
+                    <a href="#classes" class="btn btn-secondary">Ver Aulas</a>
+                </div>
 
-    <!-- WHY CHOOSE US SECTION -->
-    <section id="why-us" class="why-us">
-        <div class="container">
-            <h2 class="section-title">Porquê Escolher a Dance Fusion?</h2>
-            <p class="section-intro">Mais do que uma escola de dança, a Dance Fusion é um espaço onde cada aluno encontra confiança, disciplina, criatividade e alegria através do movimento.</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">👶</div>
-                    <h3>Aulas a partir dos 3 anos</h3>
-                    <p>Nenhuma idade é cedo demais para começar a descobrir a magia da dança e do movimento.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">❤️</div>
-                    <h3>Ambiente Familiar e Motivador</h3>
-                    <p>Um espaço acolhedor onde cada aluno se sente especial e motivado a crescer.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">👨‍🏫</div>
-                    <h3>Professores Dedicados</h3>
-                    <p>Profissionais apaixonados que orientam e inspiram cada passo da tua jornada.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎭</div>
-                    <h3>Espetáculos, Palco e Evolução Artística</h3>
-                    <p>Oportunidades para brilhar em palco e desenvolver confiança e talento artístico.</p>
+                <div class="hero-contact-buttons">
+                    <a href="tel:+351934309236" class="btn-icon btn-phone" aria-label="Ligar para a Dance Fusion">
+                        <span class="icon" aria-hidden="true">☎</span>
+                        <span>Ligar</span>
+                    </a>
+                    <a href="https://www.facebook.com/academiadancefusion/" target="_blank" rel="noopener noreferrer" class="btn-icon btn-facebook" aria-label="Facebook da Dance Fusion">
+                        <span class="icon" aria-hidden="true">f</span>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/academiadancefusion/" target="_blank" rel="noopener noreferrer" class="btn-icon btn-instagram" aria-label="Instagram da Dance Fusion">
+                        <span class="icon" aria-hidden="true">IG</span>
+                        <span>Instagram</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-image">
+                <picture>
+                    <source srcset="images/hero.webp" type="image/webp">
+                    <img src="images/hero.jpg" alt="Alunos da Dance Fusion em espetáculo" class="hero-img" width="900" height="397" fetchpriority="high">
+                </picture>
+            </div>
+        </section>
 
-    <!-- CLASSES SECTION -->
-    <section id="classes" class="classes">
-        <div class="container">
-            <h2 class="section-title">Aulas</h2>
-            <p class="section-intro">Descobre os nossos tipos de aulas adaptados a todas as idades e níveis de experiência.</p>
-            
-            <div class="classes-grid">
-                <div class="class-card">
-                    <div class="class-icon">🎈</div>
-                    <h3>Dança para Crianças</h3>
-                    <p>Introdução divertida ao mundo da dança, desenvolvendo ritmo, coordenação e criatividade.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-icon">🌟</div>
-                    <h3>Dança para Jovens</h3>
-                    <p>Aulas dinâmicas onde os jovens exploram diferentes estilos e expressão artística.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-icon">✨</div>
-                    <h3>Dança para Adultos</h3>
-                    <p>Nunca é tarde para começar. Aulas relaxantes e energizantes para todas as capacidades.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-icon">🎬</div>
-                    <h3>Formação Artística</h3>
-                    <p>Desenvolvimento completo de técnicas de dança, teatro e artes de palco.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-icon">🎪</div>
-                    <h3>Preparação para Palco e Espetáculos</h3>
-                    <p>Treino especializado para performances, confiança e presença em palco.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-icon">💻</div>
-                    <h3>Aulas Online</h3>
-                    <p>Aprende dança confortavelmente de casa com aulas interativas e personalizadas.</p>
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <h2 class="section-title">Porquê Escolher a Dance Fusion?</h2>
+                <p class="section-intro">Mais do que uma escola de dança, a Dance Fusion é um espaço onde cada aluno encontra confiança, disciplina, criatividade e alegria através do movimento.</p>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">👶</div>
+                        <h3>Aulas a partir dos 3 anos</h3>
+                        <p>Nenhuma idade é cedo demais para começar a descobrir a magia da dança e do movimento.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">❤️</div>
+                        <h3>Ambiente Familiar e Motivador</h3>
+                        <p>Um espaço acolhedor onde cada aluno se sente especial e motivado a crescer.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">👨‍🏫</div>
+                        <h3>Professores Dedicados</h3>
+                        <p>Profissionais apaixonados que orientam e inspiram cada passo da tua jornada.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">🎭</div>
+                        <h3>Espetáculos, Palco e Evolução Artística</h3>
+                        <p>Oportunidades para brilhar em palco e desenvolver confiança e talento artístico.</p>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="schedule-note">
-                <p>📅 <strong>Para saberes os horários disponíveis, entra em contacto com a academia.</strong></p>
+        <section id="classes" class="classes">
+            <div class="container">
+                <h2 class="section-title">Aulas</h2>
+                <p class="section-intro">Descobre os nossos tipos de aulas adaptados a todas as idades e níveis de experiência.</p>
+
+                <div class="classes-grid">
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">🎈</div>
+                        <h3>Dança para Crianças</h3>
+                        <p>Introdução divertida ao mundo da dança, desenvolvendo ritmo, coordenação e criatividade.</p>
+                    </article>
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">🌟</div>
+                        <h3>Dança para Jovens</h3>
+                        <p>Aulas dinâmicas onde os jovens exploram diferentes estilos e expressão artística.</p>
+                    </article>
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">✨</div>
+                        <h3>Dança para Adultos</h3>
+                        <p>Nunca é tarde para começar. Aulas relaxantes e energizantes para todas as capacidades.</p>
+                    </article>
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">🎬</div>
+                        <h3>Formação Artística</h3>
+                        <p>Desenvolvimento completo de técnicas de dança, teatro e artes de palco.</p>
+                    </article>
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">🎪</div>
+                        <h3>Preparação para Palco e Espetáculos</h3>
+                        <p>Treino especializado para performances, confiança e presença em palco.</p>
+                    </article>
+                    <article class="class-card">
+                        <div class="class-icon" aria-hidden="true">💻</div>
+                        <h3>Aulas Online</h3>
+                        <p>Aprende dança confortavelmente de casa com aulas interativas e personalizadas.</p>
+                    </article>
+                </div>
+
+                <div class="schedule-note">
+                    <p><strong>Para saberes os horários disponíveis, entra em contacto com a academia.</strong></p>
+                    <p class="schedule-note-sub">Telefone: <a href="tel:+351934309236">934 309 236</a></p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- HIGHLIGHTS SECTION -->
-    <section id="highlights" class="highlights">
-        <div class="container">
-            <h2 class="section-title">Vive a Experiência Dance Fusion</h2>
-            <p class="section-intro">Aqui, cada aula é uma oportunidade para crescer, superar limites e fazer parte de uma comunidade apaixonada pela dança.</p>
-            
-            <div class="highlights-grid">
-                <div class="highlight-item">
-                    <span class="highlight-number">⚡</span>
-                    <h3>Energia</h3>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-number">🎯</span>
-                    <h3>Técnica</h3>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-number">💪</span>
-                    <h3>Confiança</h3>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-number">🎭</span>
-                    <h3>Palco</h3>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-number">🤝</span>
-                    <h3>Comunidade</h3>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-number">❤️</span>
-                    <h3>Paixão</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="highlights" class="highlights">
+            <div class="container">
+                <h2 class="section-title">Vive a Experiência Dance Fusion</h2>
+                <p class="section-intro">Aqui, cada aula é uma oportunidade para crescer, superar limites e fazer parte de uma comunidade apaixonada pela dança.</p>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Queres Começar a Dançar?</h2>
-            <p class="section-intro">Fala connosco e descobre qual a melhor aula para ti ou para o teu filho.</p>
-
-            <div class="contact-info">
-                <div class="info-item">
-                    <span class="info-icon">📍</span>
-                    <div>
-                        <h3>Morada</h3>
-                        <p>Alameda Pocinho das Nascentes, 2870-453 Montijo</p>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">⚡</span>
+                        <h3>Energia</h3>
                     </div>
-                </div>
-                <div class="info-item">
-                    <span class="info-icon">📞</span>
-                    <div>
-                        <h3>Telefone</h3>
-                        <p><a href="tel:+351934309236">934 309 236</a></p>
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">🎯</span>
+                        <h3>Técnica</h3>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">💪</span>
+                        <h3>Confiança</h3>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">🎭</span>
+                        <h3>Palco</h3>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">🤝</span>
+                        <h3>Comunidade</h3>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon" aria-hidden="true">❤️</span>
+                        <h3>Paixão</h3>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="contact-buttons">
-                <a href="tel:+351934309236" class="btn btn-primary">☎️ Ligar Agora</a>
-                <a href="https://wa.me/351934309236" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💬 Enviar Mensagem</a>
-                <a href="https://www.google.com/maps/search/Alameda+Pocinho+das+Nascentes,+2870-453+Montijo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">🗺️ Ver no Mapa</a>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Queres Começar a Dançar?</h2>
+                <p class="section-intro">Fala connosco e descobre qual a melhor aula para ti ou para o teu filho.</p>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Morada</h3>
+                            <p>Alameda Pocinho das Nascentes, 2870-453 Montijo</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon" aria-hidden="true">📞</span>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p><a href="tel:+351934309236">934 309 236</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:+351934309236" class="btn btn-primary">Ligar Agora</a>
+                    <a href="https://wa.me/351934309236" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Enviar Mensagem (WhatsApp)</a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Alameda+Pocinho+das+Nascentes,+2870-453+Montijo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver no Mapa</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/academiadancefusion/" target="_blank" rel="noopener noreferrer" class="social-btn facebook">Facebook</a>
+                    <a href="https://www.instagram.com/academiadancefusion/" target="_blank" rel="noopener noreferrer" class="social-btn instagram">Instagram</a>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div class="social-links">
-                <a href="https://www.facebook.com/academiadancefusion?locale=pt_PT" target="_blank" rel="noopener noreferrer" class="social-btn facebook">Facebook</a>
-                <a href="#" class="social-btn instagram">Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Dance Fusion - Academia de Dança. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Dance Fusion — Academia de Dança. Todos os direitos reservados.</p>
             <p class="footer-tagline">A partir dos 3 anos, DANÇAR É AQUI.</p>
+            <p class="footer-domain"><a href="https://dancefusion.pt/">dancefusion.pt</a></p>
         </div>
     </footer>
 
