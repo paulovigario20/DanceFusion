@@ -1218,11 +1218,11 @@ a {
     }
 }
 
-.event-badge--law {
+.event-badge--low {
     background: #1a1a2e;
 }
 
-.event-card--lawnation {
+.event-card--lownation {
     padding: 0;
     overflow: hidden;
     display: flex;
@@ -1243,7 +1243,7 @@ a {
     min-height: 0;
 }
 
-.event-card--lawnation .event-card-body {
+.event-card--lownation .event-card-body {
     padding: 1.75rem;
     flex: 1;
     display: flex;
